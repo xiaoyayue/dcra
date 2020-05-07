@@ -1,0 +1,40 @@
+---
+title: "WhitePaper_PublicDataGraph_ly"
+author: "Lily Yue"
+date: "5/8/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+require(rmarkdown)
+```
+
+```{r cars}
+#import data
+propertytax=read.csv('../../Data/property_tax_final.csv')
+ic=read.csv('../../Data/final_illegal_construction_inspections.csv')
+vp=read.csv('../../Data/final_vacant_property_inspections.csv')
+grocery=read_csv('https://opendata.arcgis.com/datasets/1d7c9d0e3aac49c1aa88d377a3bae430_4.csv')
+charter_school=read_csv('https://opendata.arcgis.com/datasets/a3832935b1d644e48c887e6ec5a65fcd_1.csv')
+metro_station= read_csv('https://opendata.arcgis.com/datasets/556208361a1d42c68727401386edf707_111.csv')
+metro_bus=read_csv('https://opendata.arcgis.com/datasets/e85b5321a5a84ff9af56fd614dab81b3_53.csv')
+```
+
+
+```{r pressure, echo=FALSE}
+#property value
+plot(x=ic$WARD, y=ic$diff_in_sale, ylim=c(-50000, 250000), ylab="Difference in Sales ($)", type="o",alpha=0.7, col="dodgerblue4")
+```
+
+```{r}
+#charter school
+counts1<-table(charter_school$WARD)
+barplot(counts1, ylab='Number of Charter School', col='dodgerblue4')
+```
+
+```{r}
+#grocery store
+counts2<-table(grocery$WARD)
+barplot(counts2, ylab="Number of Grocery Store", col='dodgerblue4')
+```
