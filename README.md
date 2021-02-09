@@ -3,7 +3,7 @@ This folder encompasses the research results of a year-long project with the Dep
 
 Due to confidentiality agreement, the repository only shows partial work which wouldn't result into a full replication of the project result and insight.
 
-The </b> cleaning&probe </b> folder includes code for data access and cleaning tasks such as web-scrapping, API accessing,  data probing&harmonizations&merging, and data visualizations.
+The <strong cleaning&probe <strong> folder includes code for data access and cleaning tasks such as web-scrapping, API accessing,  data probing&harmonizations&merging, and data visualizations.
 
 The </b>modeling</b> folder includes the randome tree and logit models used to predict house vacancies and flipping in DC. Before finalizing the models, our team also tried KNN, Decision Trees, and Naive Bayesian models. 
 
